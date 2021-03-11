@@ -1,0 +1,16 @@
+RewriteEngine On
+
+RewriteCond %{HTTPS} !=on
+RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301,NE]
+
+RewriteRule ^(images)($|/) - [L]
+RewriteRule ^(.*\.(png|ico|xml|webmanifest|svg))($|/) - [L]
+
+RewriteRule %{REQUEST_URI} .*\.(ico|png)
+RewriteRule ^(.*)/ - [L]
+
+RewriteCond %{DOCUMENT_ROOT}%{REQUEST_URI} -f [OR]
+RewriteCond %{DOCUMENT_ROOT}%{REQUEST_URI} -d
+RewriteRule ^ - [L]
+
+RewriteRule ^ /index.html [L]

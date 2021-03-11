@@ -1,0 +1,61 @@
+@import "../../node_modules/css-reset-and-normalize-sass/scss/reset-and-normalize";
+
+@import "breakpoints";
+
+html {
+	height: 100%;
+	font-family: Helvetica, Arial, sans-serif;
+	background: #ffffff;
+
+	body {
+		padding: 20px;
+	}
+
+	h1 {
+		font-size: 2rem;
+		font-weight: bold;
+		margin-bottom: 2rem;
+	}
+
+	h2 {
+		font-size: 1.5rem;
+		font-weight: bold;
+		margin-bottom: .5rem;
+	}
+
+	.list {
+		margin-bottom: 2rem;
+
+		ul {
+			line-height: 1.2rem;
+			columns: 2;
+			padding: 1rem;
+			border: 2px solid #000000;
+
+			@include respond-to(xsmall) {
+				columns: 3;
+			}
+
+			@include respond-to(small) {
+				columns: 4;
+			}
+
+			@include respond-to(large) {
+				columns: 5;
+			}
+
+			@include respond-to(large) {
+				columns: 6;
+			}
+
+			@include respond-to(huge) {
+				columns: 7;
+			}
+
+
+		}
+
+
+	}
+
+}

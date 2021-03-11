@@ -1,0 +1,14 @@
+{
+  "compilerOptions": {
+    "baseUrl": "./src/",
+    "esModuleInterop": true,
+    "jsx": "react",
+    "module": "commonjs",
+    "noImplicitAny": true,
+    "noUnusedLocals": true,
+    "outDir": "./build",
+    "resolveJsonModule": true,
+    "sourceMap": true,
+    "target": "es6",
+  }
+}
